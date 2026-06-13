@@ -13,6 +13,8 @@ import { Reveal } from '@/components/Reveal';
 import { AIInsights } from '@/components/AIInsights';
 import { Helmet } from 'react-helmet-async';
 
+import { ThreeBackground } from '@/components/ThreeBackground';
+
 const Index = () => {
   return (
     <>
@@ -29,9 +31,10 @@ const Index = () => {
         <link rel="canonical" href="https://moksha-portfolio.com" />
       </Helmet>
 
-      <div className="min-h-screen relative overflow-hidden">
+      <div className="min-h-screen relative overflow-hidden bg-transparent">
+        <ThreeBackground />
         <Navigation />
-        <main>
+        <main className="relative z-10">
           <HeroSection />
           <Reveal delay={0.1}>
             <HighlightsSection />

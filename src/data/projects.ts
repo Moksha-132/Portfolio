@@ -4,7 +4,25 @@ import { Project } from '../types/portfolio';
 
 export const projects: Project[] = [
     {
-        title: 'Shnoor AI Trade Intelligence',
+        title: 'Shnoor SaaS Platform',
+        description:
+            'The Ultimate SaaS Hub for modern teams. Features Admin Analytics, Manager Portals for client scheduling, and Instant Discovery for one-click checkouts and flexible billing plans.',
+        techStack: ['Next.js', 'React', 'Tailwind CSS', 'SaaS', 'Stripe'],
+        icon: Briefcase,
+        gradient: 'from-orange-500/20 to-amber-500/20',
+        demo: 'https://shnoor-saas-platform.vercel.app',
+    },
+    {
+        title: 'PlagCheck - Originality Intelligence',
+        description:
+            'A powerful plagiarism detection engine that scans documents and source code to ensure originality. Features a modern, responsive interface built with Next.js and advanced text analysis algorithms.',
+        techStack: ['Next.js', 'React', 'Tailwind CSS', 'Node.js', 'Text Analysis'],
+        icon: Shield,
+        gradient: 'from-orange-500/20 to-red-500/20',
+        demo: 'https://plagarism-detection.vercel.app',
+    },
+    {
+        title: 'AI Trade Intelligence',
         description:
             'An enterprise-grade AI ecosystem for global trade. Features high-accuracy OCR for complex shipping documents, automated duty calculation engines, and predictive analytics for supply chain optimization.',
         techStack: ['React', 'FastAPI', 'PostgreSQL', 'Python', 'OCR/AI'],
@@ -32,41 +50,5 @@ export const projects: Project[] = [
         gradient: 'from-violet-500/20 to-purple-500/20',
         github: 'https://github.com/Moksha-132/Online-Live-Code-Editor',
         demo: 'https://online-live-code-editor.vercel.app/',
-    },
-    {
-        title: 'AI Data Insights',
-        description:
-            'An offline AI-powered data analytics system that converts raw CSV data into explainable insights. Features automated profiling, interactive dashboards, and a local LLaMA-based assistant.',
-        techStack: ['Python', 'LLaMA', 'Pandas', 'Flask'],
-        icon: TrendingUp,
-        gradient: 'from-blue-500/20 to-cyan-500/20',
-        github: 'https://github.com/Moksha-132/AI-Data-Analyst-LLAMA3.2-',
-    },
-    {
-        title: 'AI Concept Explainer',
-        description:
-            'An interactive web application that explains AI concepts across beginner, intermediate, and advanced levels. Features text-based explanations with optional voice support.',
-        techStack: ['Streamlit', 'Python', 'LLM (Ollama)'],
-        icon: Brain,
-        gradient: 'from-purple-500/20 to-indigo-500/20',
-        github: 'https://github.com/Moksha-132/Offline-AI-Tutor-',
-    },
-    {
-        title: 'OTT Platform Clone',
-        description:
-            'A streaming platform clone featuring a modern UI with movie and series browsing, responsive design, dynamic content handling, and clean navigation.',
-        techStack: ['React', 'APIs', 'CSS', 'UI Components'],
-        icon: Tv,
-        gradient: 'from-fuchsia-500/20 to-pink-500/20',
-        github: 'https://github.com/Moksha-132/Jimoflix-OTT-Platform-Clone',
-    },
-    {
-        title: 'Cyber Attack Detection in WSNs',
-        description:
-            'A machine learning-powered web application for detecting cyber attacks in Wireless Sensor Networks. Uses a unified ensemble model trained on the WSN-DS dataset to classify network intrusions with high accuracy. Features a Flask backend, interactive dashboard, and real-time attack report generation.',
-        techStack: ['Python', 'Flask', 'Machine Learning', 'Cooja Simulator', 'SQLite'],
-        icon: Shield,
-        gradient: 'from-emerald-500/20 to-teal-500/20',
-        github: 'https://github.com/Moksha-132/Cyber-Attack-Detection-in-WSNs',
     },
 ];

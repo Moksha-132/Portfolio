@@ -5,12 +5,12 @@ interface SectionBackgroundProps {
 export const SectionBackground = ({ isDynamic = false }: SectionBackgroundProps) => {
     return (
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-            {/* Base Theme Color */}
-            <div className="absolute inset-0 bg-background" />
+            {/* Base Theme Color - Slightly transparent to reveal global 3D background */}
+            <div className={`absolute inset-0 bg-background/${isDynamic ? '40' : '70'} backdrop-blur-[2px]`} />
 
             {/* Background Layer */}
             <div
-                className={`absolute inset-0 dark:opacity-[0.25] ${isDynamic ? 'opacity-[0.7] animate-vivid-shift' : 'opacity-[0.3]'}`}
+                className={`absolute inset-0 dark:opacity-[0.25] ${isDynamic ? 'opacity-[0.6] animate-vivid-shift' : 'opacity-[0.2]'}`}
                 style={{
                     background: isDynamic
                         ? 'linear-gradient(135deg, hsl(265 80% 92%), hsl(275 75% 90%), hsl(285 80% 93%), hsl(270 85% 88%), hsl(280 70% 92%))'
@@ -19,12 +19,12 @@ export const SectionBackground = ({ isDynamic = false }: SectionBackgroundProps)
                 }}
             />
 
-            {/* Aurora Blobs - Only for Hero - Hidden in Dark Mode */}
+            {/* Aurora Blobs - Only for Hero */}
             {isDynamic && (
-                <div className="absolute inset-0 overflow-hidden pointer-events-none dark:hidden">
-                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[120px] animate-blob" />
-                    <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/20 rounded-full blur-[120px] animate-blob delay-500" />
-                    <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[100px] animate-blob delay-200" />
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[120px] animate-blob dark:hidden" />
+                    <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/20 rounded-full blur-[120px] animate-blob delay-500 dark:hidden" />
+                    <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[100px] animate-blob delay-200 dark:hidden" />
                 </div>
             )}
 

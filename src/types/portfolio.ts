@@ -17,7 +17,7 @@ export interface Project {
     techStack: string[];
     icon: LucideIcon;
     gradient: string;
-    github: string;
+    github?: string;
     demo?: string;
 }
 
